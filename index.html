@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repayment Calculator App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Plus+Jakarta+Sans">
+</head>
+<body>
+ <div class="main-div" id="container1">
+  <div class="h1-div" id="mort-h1"><h1 id="mortgage-h1">Mortgage Calculator</h1><p class="delete" id="delete-btn">Clear All</p></div>
+  <form id="form">
+    <div class="mortgage-amount-box">
+    <label class="mortgage-amount-label" for="mortgage-amount">Mortgage Amount</label> 
+     <div class="amount-div" id="amount-only">
+    <input type="text" id="mortgage-amount" class="amount" name="amount">
+    <select class="dropdown">
+    <option value="GBP">£</option>
+    <option value="USD">$</option>
+    <option value="EUR">€</option>
+    <option value="JPY">¥</option>
+    <option value="FRF">₣</option>
+    <option value="KRW">₩</option>
+    <option value="RUB">₽</option>
+    <option value="MNT">₮</option>
+    <option value="KZT">₮</option>
+    <option value="PHP">₱</option>
+    <option value="NGN">₦</option>
+    <option value="KHR">៛</option>
+    </select>
+     </div>
+     <p class="message"></p>
+    </div>
+     
+    <div class="main-div-1" id="sub-main-1">
+        <div class="mortgage-term-box">
+        <label class="term-label" for="mortgage-term">Mortgage Term</label>
+        <div class="term-div" id="term-div-1">
+        <input type="number" id="mortgage-term" class="term" name="term"><span class="years" id="years">years</span>
+        </div>
+        <p class="message"></p>
+        </div>
+        
+        <div class="interest-rate-box">
+        <label class="rate-label" for="interest-rate">Interest Rate</label>
+        <div class="rate-div" id="rate-div-1">
+        <input type="number" id="interest-rate" class="rate" name="rate"><span class="percentage" id="percentage">&percnt;</span>
+        </div>
+        <p class="message"></p>
+        </div>
+    </div>
+
+    <div class="main-div-2" id="sub-main-2">
+        <h2 class="mortgage-type" id="mortgage-type">Mortgage Type</h2>
+
+        <div class="repayment-div" id="repay-div">
+            <label class="repayment-label" for="repayment"><input type="radio" id="repayment" class="repay" name="mortgage-type" value="repayment">Repayment</label>
+        </div>
+
+        <div class="interest-only-div" id="interest-div">
+            <label class="interest-label" for="interest-only"><input type="radio" id="interest-only" class="interest" name="mortgage-type" value="interest-only">Interest Only</label>
+        </div>
+        <p class="message"></p>
+    </div>
+
+    <div class="footer" id="calculate-btn">
+       <img class="calculator" id="cal-img" src="icon-calculator.svg" alt="icon-calculator"><h3 class="cal-btn" id="cal-repay">Calculate Repayments</h3>
+    </div>
+    </form>
+  </div>
+
+  <div class="result-div" id="container2">
+    <div class="empty-inputs" id="empty-inputs" hidden>
+       <img class="empty-input-img" src="illustration-empty.svg" alt="illustration-empty">
+       <p class="empty-input-para">Results shown here</p>
+       <p class="empty-input-para2">Complete the form and click "calculate repayments" to see what youir monthly repayments would be.</p>
+    </div>
+
+    <div class="result-box" id="result-box">
+      <div class="result-para-div">
+      <p class="result-para">Your results</p>
+      <p class="result-para2">Your results are shown below based on the information you provided. To adjust the result edit the form and click "calculate repayments" again.</p>
+      </div>
+      <div class="result-container" id="result-container">
+        <div class="monthly-repayment-div" id="monthly-repayment-div">
+           <p class="monthly-repayment-para" id="monthly-repayment-para">Your monthly repayments</p>
+           <p class="monthly-repayment" id="monthly-repayment"></p>
+        </div>
+        <hr>
+        <div class="total-repayment-div" id="total-repayment-div">
+          <p class="total-repayment-para" id="total-repayment-para">Total you'll repay over the term</p>
+          <p class="total-repayment" id="total-repayment"></p>
+        </div> 
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
